@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+<queries>
+
+	<!-- EXAMPLE QUERY -->
+	
+	<!-- 	<query name="prescripcions.count"> -->
+	<!-- 		<![CDATA[  -->
+	<!-- 			Select count(1) from TTSNU_PRESCRIPCIO pres, TTSNU_USUARI usu -->
+	<!--   			where pres.estpres_codestpres = ? and (usu.lsttipusu = 'SEM' or ((usu.lsttipusu = 'ADJ')  -->
+	<!--   			and (pres.adj_ideadj = usu.adj_ideadj)) or ((usu.lsttipusu = 'PRES')  -->
+	<!--   			and (pres.unp_codunppres = ?))) and usu.codusu = ?		 -->
+	<!-- 		]]> -->
+	<!-- 	</query> -->
+
+</queries>                 

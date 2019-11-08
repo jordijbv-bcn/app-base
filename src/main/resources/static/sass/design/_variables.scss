@@ -1,0 +1,83 @@
+/* COMPONENT -> Variables */
+
+/* // Colors */
+$black: #000;
+$white: #fff;
+
+$content_blackground: #F3F3F4;
+
+$login_background_color: rgba(0, 165, 209, 0.3);
+$login_border_color: #5187a5;
+$button_app_color_one: #51c1df;
+$button_app_color_two: #62c7e2;
+$button_app_color_three: #4cb7d3;
+$button_app_border_color:#00a5d1;
+
+$button_app_hover_one: #2ea8c8;
+$button_app_hover_two: #42b0cd;
+$button_app_hover_three: #2b9fbe;
+$button_app_hover_border: #0097c0;
+
+$button_app_active_focus_one: #2689a3;
+$button_app_active_focus_two: #24829a;
+$button_app_active_focus_three: #3b94ac;
+$button_app_active_focus_border: #007b9c;
+
+$modal_panel_primary_border_color: #00a5d1;
+$modal_panel_primary_background_color: #00a5d1;
+$modal_panel_primary_footer_color: #ddf3f8;
+
+$modal-backdrop_background_color: #33b7da;
+
+$panel_primary_color: #33b7da;
+$panel_primary_footer_color: #ddf3f8;
+
+$datepicker_color: #dbf2f8;
+$datepicker_general_color:#51c1df;
+$datepicker_general_color_after:#eef9fb;
+
+$datable_thead: #eef9fb;
+$datable_thead_hover: #e5f5fa;
+$datable_thead_bordered: #ededed;
+
+$datable_element_select:rgb(51, 183, 218);
+
+$scroll_top_background: #777777;
+$scroll_top_background_hover: #888888;
+$scroll_top_color: #eeeeee;
+
+/* // Fonts */
+@font-face {
+    font-family: "Arial-Narrow";
+    src: url('../fonts/arial-narrow.ttf') format('truetype');
+    font-style: "normal";
+    font-weight: "normal";
+}
+$font-family-generic: verdana, helvetica, arial, sans-serif;
+$font-family-arial_narrow: Arial-Narrow;
+$font-size-generic: 11px !default;
+
+/* // Navbar */
+$navbar-default-color: #00a5D1;
+$navbar-a-hover: #dbf2f8;
+$navbar-element-hover: rgba(0, 128, 192, 0.28);
+
+/* // Dropdown */
+$dropdown-border-color: #ccedf5;
+
+/* // Navbar PUB */
+$navbar-pub-background: #ddf3f8; 
+$navbar-pub-border: #33b7da;
+$navbar-pub-active: #33b7da;
+
+/* // Witdh */
+$witdh-xs: 767px;
+
+$witdh-xs-hidden: 470px;
+
+$color-navbar: #f8f9fa;
+
+$color-box-1: #ffffff; 
+$color-box-2: #ffffff; 
+$color-box-3: #dde4e9; 
+$color-box-4: #b1c0ce; 

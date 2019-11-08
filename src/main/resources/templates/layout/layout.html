@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.springframework.org/security/tags" th:lang="${#locale.language}">
+<head>
+
+	<!-- PAGE TITLE -->
+	<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE" th:text="#{app.name}"></title>
+	
+	<!-- ICO -->
+	<link rel="icon" type="image/x-icon" th:href="@{/images/favicon.ico}" />
+	
+	<!-- META -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- INCLUDE CSS  -->
+	<link th:href="@{/css/generic/bootstrap.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/generic/jquery-ui.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/generic/all.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/generic/bootstrap-datetimepicker.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/generic/datatables.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/main/app-design.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+
+	<!--  INCLUDE JS   -->
+	<script th:src="@{/js/generic/jquery.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/jquery-ui.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/jquery.serialize-object.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/moment.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/bootstrap.bundle.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/bootstrap-datetimepicker.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/generic/datatables.min.js(version=${@environment.getProperty('version.date')})}"></script>
+	<script th:src="@{/js/main/app-design.js(version=${@environment.getProperty('version.date')})}"></script>
+	
+</head>
+<body>
+<div class="container">
+	<nav th:replace="fragments/navbar :: navbar"></nav>
+	<div id="content" layout:fragment="content" style="margin-top: 75px;"></div>
+	<script type="text/javascript" th:inline="javascript">	
+		var contextPath= /*[[@{/}]]*/ '';
+		var locale = [[${#locale.language}]];
+		var datetimepicker = {
+			today : [[#{msg.datetimepicker.today}]],
+			clear : [[#{msg.datetimepicker.clear}]],
+			close : [[#{msg.datetimepicker.close}]],
+			selectMonth : [[#{msg.datetimepicker.selectMonth}]],
+			prevMonth : [[#{msg.datetimepicker.prevMonth}]],
+			nextMonth : [[#{msg.datetimepicker.nextMonth}]],
+			selectYear : [[#{msg.datetimepicker.selectYear}]],
+			prevYear : [[#{msg.datetimepicker.prevYear}]],
+			nextYear : [[#{msg.datetimepicker.nextYear}]],
+			selectDecade : [[#{msg.datetimepicker.selectDecade}]],
+			prevDecade : [[#{msg.datetimepicker.prevDecade}]],
+			nextDecade : [[#{msg.datetimepicker.nextDecade}]],
+			prevCentury : [[#{msg.datetimepicker.prevCentury}]],
+			nextCentury : [[#{msg.datetimepicker.nextCentury}]],
+			pickHour : [[#{msg.datetimepicker.pickHour}]],
+			incrementHour : [[#{msg.datetimepicker.incrementHour}]],
+			decrementHour : [[#{msg.datetimepicker.decrementHour}]],
+			pickMinute : [[#{msg.datetimepicker.pickMinute}]],
+			incrementMinute : [[#{msg.datetimepicker.incrementMinute}]],
+			decrementMinute : [[#{msg.datetimepicker.decrementMinute}]],
+			pickSecond : [[#{msg.datetimepicker.pickSecond}]],
+			incrementSecond : [[#{msg.datetimepicker.incrementSecond}]],
+			decrementSecond : [[#{msg.datetimepicker.decrementSecond}]],
+			togglePeriod : [[#{msg.datetimepicker.togglePeriod}]],
+			selectTime : [[#{msg.datetimepicker.selectTime}]]
+		};	
+	</script>
+	</div>
+</body>
+</html>

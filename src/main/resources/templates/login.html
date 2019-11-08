@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head>
+
+	<!-- TITLE PAGE -->
+	<title th:text="#{app.name} + ' - ' + #{msg.login.title}"></title>
+
+	<!-- ICO -->
+	<link rel="icon" type="image/x-icon" th:href="@{/images/favicon.ico}" />
+	
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- INCLUDE CSS  -->
+	<link th:href="@{/css/generic/bootstrap.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/generic/all.min.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+	<link th:href="@{/css/specific/login.css(version=${@environment.getProperty('version.date')})}" rel="stylesheet" media="screen" />
+
+</head>
+<body>
+	<div class="container">
+		<form name="loginForm" th:action="@{/login}" method="post" class="form-signin">
+			<div class="panel">
+				<h4 class="display-4 mb-4" th:text="#{app.name}"></h4>
+				<h3 th:text="#{msg.login.title}"></h3>
+				<p th:text="#{msg.login.add.mail}"></p>
+			</div>
+			<div class="form-group">
+				<input type="text" id="username" name='username' class="form-control" spellcheck="false" th:placeholder="#{msg.login.username}"/>
+			</div>
+			<div class="form-group">
+				<input type="password" name='password' id="password" class="form-control" spellcheck="false" th:placeholder="#{msg.login.password}" />
+			</div>
+			 <div class="form-group">
+				<button class="btn btn-lg btn-dark btn-block" type="submit"><span th:text="#{msg.login.sign.in}"></span></button>
+			</div>
+			<div th:if="${param.error}" class="alert alert-danger">
+				<i class="fas fa-exclamation-triangle"></i> <span th:text="#{msg.login.identification.error}"></span>
+			</div>
+			<div th:if="${param.logout}" class="alert alert-success">
+				<i class="fas fa-check-circle"></i> <span th:text="#{msg.login.logout.success}"></span>
+			</div>
+			<div th:if="${param.expired}" class="alert alert-danger">
+				<i class="fas fa-exclamation-triangle"></i>  <span th:text="#{msg.login.expired.session}"></span>
+			</div>
+		</form>
+		
+	</div>
+</body>
+</html>

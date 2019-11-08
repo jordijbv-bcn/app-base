@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/layout}" xmlns:layout="http://www.thymeleaf.org/" xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head>
+	<!-- Page Title -->
+	<title th:text="#{msg.main.title}"></title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="display-4"><span th:text="#{msg.welcome.to}"></span> <strong th:text="#{app.name}"></strong></h1>
+			</div>
+		</div>			
+	</div>
+</body>
+</html>

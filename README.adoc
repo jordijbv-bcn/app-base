@@ -1,0 +1,9 @@
+=== Eclipse bugs
+
+* This project generates some classes at compile time (by hibernate-jpamodelgen),
+and Eclipse is unable to manage the references to these classes.
+
+Solution:
+
+1. Properties -> Java Build Path -> Source -> Link Source...
+2. Link to: PROJECT_LOC\target\generated-sources\annotations

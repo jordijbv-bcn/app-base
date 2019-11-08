@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}" layout:decorate="~{layout/layout}" xmlns:layout="http://www.thymeleaf.org/" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<!-- Page Title -->
+	<title th:text="#{msg.404.title}"></title>
+</head>
+<body class="errorPagesGeneral">
+	<div layout:fragment="content">	
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<div class="text-center mb-xl notfound">
+						<h1 class="display-1" th:text="#{msg.404.404}"></h1>
+						<p class="m0" th:text="#{msg.404.description}"></p>
+						<p th:text="#{msg.404.noExists}" class="text-muted"></p>
+						<a th:href="@{/}" class="btn btn-secondary btn-sm" th:text="#{msg.goApp}"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
