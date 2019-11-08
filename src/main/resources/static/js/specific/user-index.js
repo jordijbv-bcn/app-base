@@ -43,6 +43,8 @@ $(document).ready(function() {
 	
 });
 
+//	FUNCTIONS API-REST
+
 function getUser(element) {
 	
 	$.ajax({
